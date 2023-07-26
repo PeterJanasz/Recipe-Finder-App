@@ -1,3 +1,3 @@
-var searchBox = document.querySelector('#searchBox');
-var filterBox = document.querySelector('#filter');
-var activityLog = document.querySelector('#activities');
+const searchBox = document.querySelector('#searchBox');
+const filterBox = document.querySelector('#filter');
+const activityLog = document.querySelector('#activities');
