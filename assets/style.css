@@ -11,6 +11,7 @@ header {
   justify-content: space-between;
   box-shadow: 0 0 10px #000;
   padding: 0 5%;
+  height: 50px;
 }
 
 h1 {
@@ -46,17 +47,16 @@ ul a:hover {
 #hero {
   width: 100%;
   height: 40vh;
-  margin-bottom: 20px;
   background-image: url("");
   background-size: cover;
   background-position-x: -1px;
-  background-position-y: -57px;
+  background-position-y: -0px;
 }
 #searchBox {
   width: 70%;
   height: 40px;
   position: absolute;
-  top: 25vh;
+  top: 23vh;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -64,9 +64,10 @@ ul a:hover {
 
 #subContent {
   background-color: antiquewhite;
-  height: 500px;
+  height: fit-content;
   padding: 30px 5%;
   display: flex;
+  flex-direction: column;
 }
 
 
@@ -87,21 +88,20 @@ ul a:hover {
 }
 
 
-/* Filter */
-#filter {
-  margin-right: 20px;
-  border: 1px solid #000;
-  border-radius: 6px;
-  width: 20%;
-  height: fit-content;
+/* menu */
+.menu {
+  border-bottom: 3px dashed rgb(55, 100, 63);
+  padding-bottom: 20px;
+  margin-bottom: 50px;
 }
-#filter h2 {
-  font-size: 26px;
-  font-weight: 600;
-  text-align: center;
-  background-color: hsl(34, 78%, 81%);
-  border-radius: 6px 6px 0 0;
+.menu-list {
+  display: flex;
+  flex-direction: column;
 }
+/*  */
+/* .menu-list > li {
+  display: flex;
+} */
 /*  */
 .checkbox {
   display: flex;
@@ -114,15 +114,14 @@ ul a:hover {
 }
 
 
-/* Activities */
-#activities {
-  margin-left: 20px;
+/* Recipes */
+#recipes {
   border: 1px solid #000;
   border-radius: 6px;
-  width: 80%;
   height: fit-content;
+  background-color: rgb(6, 121, 27);
 }
-#activities h2 {
+#recipes h2 {
   font-size: 26px;
   font-weight: 600;
   text-align: center;
@@ -130,9 +129,29 @@ ul a:hover {
   border-radius: 6px 6px 0 0;
 }
 
-.flex {
+.recipeColumns {
   border: 1px solid #000;
+  border-radius: 5px;
   margin: 5px;
   display: flex;
   align-items: center;
+  background-color: antiquewhite;
+  cursor: pointer;
+  transition: .8s ease;
+}
+.recipeColumns:hover {
+  scale: 100.7%;
+  box-shadow: 0 0 20px rgba(110, 110, 110, 0.5);
+  transition: 0.2s ease;
+}
+/*  */
+.recipeColumns img {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+
+/* Code For JS */
+.hideIt {
+  display: none;
 }
