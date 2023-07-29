@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,170 +9,100 @@
     <link rel="stylesheet" href="assets/style.css">
     <title>TravelApp</title>
 </head>
+
 <body>
     <header>
         <h1>Food Maker App</h1>
         <nav>
             <ul>
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>Favorites</li></a>
-                <a href="#"><li>Services</li></a>
-                <a href="#"><li>Filler Text</li></a>
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Services</li>
+                </a>
+                <a href="#">
+                    <li>Filler Text</li>
+                </a>
+                <a href="#">
+                    <li>Filler Text</li>
+                </a>
             </ul>
         </nav>
     </header>
     <main>
         <div id="hero"></div>
-        <div id="searchBox">
-            <input class="input bulma-placeholder-mixin" type="text" placeholder="Search">
-        </div>
         <div id="subContent">
-            <aside class="menu">
-                <p class="menu-label">Healthy</p> <!-- Far left text -->
-                <ul class="menu-list">
-                <li>
-                    <a class="categoryAtag">Fruits <!-- class used in JS -->
-                        <ul class="hideIt">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                apples
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                bananas
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                oranges
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                berries
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                avocado
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                mango
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                grapes
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                pineapple
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                mellons
-                            </label>
-                        </ul>
-                    </a>
-                  
+            <div id="filter">
+                <div class="foodCateFlex">
+                    <h2 class="food-category">fruits</h2>
+                    <div class="select">
+                        <select>
+                            <option>Pineapples</option>
+                            <option>Apples</option>
+                            <option>Berries</option>
+                            <option>Melons</option>
+                            <option>Bananas</option>
+                        </select>
+                    </div>
+                </div>
                 
-                    <a class="categoryAtag">Vegetables
-                        <ul class="hideIt">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                broccoli
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                spinach
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                carrots
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                bell peppers
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                onions
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                tomatoes
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                cucumbers
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                potatoes
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                kale
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                letuce
-                            </label>
-                        </ul>
-                    </a>                  
-                </li>
+                <div class="foodCateFlex">
+                    <h2 class="food-category">veggies</h2>
+                    <div class="select">
+                        <select>
+                            <option>broccoli</option>
+                            <option>spinach</option>
+                            <option>peppers</option>
+                            <option>onions</option>
+                            <option>lettuce</option>
+                        </select>
+                    </div>
+                </div>
                 
                 
                 
-                <p class="menu-label">
-                    Grains
-                </p>
-                <ul class="menu-list">
-                <li class="categoryAtag">
-                    <!-- class="is-active" -->
-                    <a>Vegetables 
-                        <ul class="hide">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                broccoli
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                spinach
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                carrots
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                bell peppers
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                onions
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                tomatoes
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                cucumbers
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                potatoes
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                kale
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                letuce
-                            </label>
-                        </ul>
-                    </a>
-                </li>            
-            </aside>
+                <div class="foodCateFlex">
+                    <h2 class="food-category">grains</h2>
+                    <div class="select">
+                        <select>
+                            <option>rice</option>
+                            <option>quinoa</option>
+                            <option>bread</option>
+                            <option>pasta</option>
+                            <option>oats</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="foodCateFlex">
+                    <h2 class="food-category">dairy</h2>
+                    <div class="select">
+                        <select>
+                            <option>milk</option>
+                            <option>cheese</option>
+                            <option>butter</option>
+                            <option>ice cream</option>
+                            <option>eggs</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="foodCateFlex">
+                    <h2 class="food-category">meats</h2>
+                    <div class="select">
+                        <select>
+                            <option>beef</option>
+                            <option>chicken</option>
+                            <option>pork</option>
+                            <option>sausage</option>
+                            <option>bacon</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button id="searchbtn">Search for recipe</button>
+
             <div id="recipes">
                 <h2>Recipes:</h2>
                 <div class="recipeColumns">
@@ -188,11 +119,12 @@
                 </div>
             </div>
         </div>
-        
-        
-    </main>    <footer>
+
+    </main>
+    <footer>
 
     </footer>
     <script src="assets/script.js"></script>
 </body>
+
 </html>
