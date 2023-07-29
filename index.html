@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <h1>Traveler App</h1>
+        <h1>Food Maker App</h1>
         <nav>
             <ul>
                 <a href="#">
@@ -32,86 +32,90 @@
     </header>
     <main>
         <div id="hero"></div>
-        <div id="searchBox">
-            <input class="input bulma-placeholder-mixin" type="text" placeholder="Search">
-        </div>
-        <div id="weather">
-            <p>75&deg;</p>
-        </div>
         <div id="subContent">
-            <div id="filter" class="is-one-third">
-                <button id="searchbtn">Search for recipe</button>
-
-                <h2 class="food-category">fruits</h2>
-                <div class="diet">
-                <label for="pineapples">
-                    <input type="checkbox" id="pineapple" value="pineapples"/>pineapples</label>
-                <label for="apples">
-                    <input type="checkbox" id="apple" value="apples"/>apples</label>
-                <label for="berries">
-                    <input type="checkbox" id="berries" value="berries"/>berries</label>
-                <label for="watermelon">
-                    <input type="checkbox" id="watermelon" value="watermelon"/>watermelon</label>
-                <label for="pineapples">
-                    <input type="checkbox" id="pineapple" value="bananas"/>bananas</label>
-</div>
-                <h2 class="food-category">veggies</h2>
-                <label for="broccoli">
-                    <input type="checkbox" id="broccoli" />broccoli</label>
-                <label for="spinach">
-                    <input type="checkbox" id="spinach" />spinach</label>
-                <label for="peppers">
-                    <input type="checkbox" id="peppers" />peppers</label>
-                <label for="onions">
-                    <input type="checkbox" id="onions" />onions</label>
-                <label for="lettuce">
-                    <input type="checkbox" id="lettuce" />lettuce</label>
-
-                <h2 class="food-category">grains</h2>
-                <label for="rice">
-                    <input type="checkbox" id="rice" />rice</label>
-                <label for="quinoa">
-                    <input type="checkbox" id="quinoa" />quinoa</label>
-                <label for="bread">
-                    <input type="checkbox" id="bread" />bread</label>
-                <label for="pasta">
-                    <input type="checkbox" id="pasta" />pasta</label>
-                <label for="oats">
-                    <input type="checkbox" id="oats" />oats</label>
-
-                <h2 class="food-category">dairy</h2>
-                <label for="milk">
-                    <input type="checkbox" id="milk" />milk</label>
-                <label for="cheese">
-                    <input type="checkbox" id="cheese" />cheese</label>
-                <label for="butter">
-                    <input type="checkbox" id="butter" />butter</label>
-                <label for="ice cream">
-                    <input type="checkbox" id="icecream" />ice cream</label>
-                <label for="eggs">
-                    <input type="checkbox" id="eggs" />eggs</label>
-
-                <h2 class="food-category">meats</h2>
-                <label for="beef">
-                    <input type="checkbox" id="beef" />beef</label>
-                <label for="chicken">
-                    <input type="checkbox" id="chicken" />chicken</label>
-                <label for="pork">
-                    <input type="checkbox" id="pork" />pork</label>
-                <label for="sausage">
-                    <input type="checkbox" id="sausage" />sausage</label>
-                <label for="bacon">
-                    <input type="checkbox" id="bacon" />bacon</label>
-
-
+            <div id="filter">
+                <div class="foodCateFlex">
+                    <h2 class="food-category">fruits</h2>
+                    <div class="select">
+                        <select>
+                            <option>Pineapples</option>
+                            <option>Apples</option>
+                            <option>Berries</option>
+                            <option>Melons</option>
+                            <option>Bananas</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="foodCateFlex">
+                    <h2 class="food-category">veggies</h2>
+                    <div class="select">
+                        <select>
+                            <option>broccoli</option>
+                            <option>spinach</option>
+                            <option>peppers</option>
+                            <option>onions</option>
+                            <option>lettuce</option>
+                        </select>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="foodCateFlex">
+                    <h2 class="food-category">grains</h2>
+                    <div class="select">
+                        <select>
+                            <option>rice</option>
+                            <option>quinoa</option>
+                            <option>bread</option>
+                            <option>pasta</option>
+                            <option>oats</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="foodCateFlex">
+                    <h2 class="food-category">dairy</h2>
+                    <div class="select">
+                        <select>
+                            <option>milk</option>
+                            <option>cheese</option>
+                            <option>butter</option>
+                            <option>ice cream</option>
+                            <option>eggs</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="foodCateFlex">
+                    <h2 class="food-category">meats</h2>
+                    <div class="select">
+                        <select>
+                            <option>beef</option>
+                            <option>chicken</option>
+                            <option>pork</option>
+                            <option>sausage</option>
+                            <option>bacon</option>
+                        </select>
+                    </div>
+                </div>
             </div>
+            <button id="searchbtn">Search for recipe</button>
+
             <div id="recipes">
                 <h2>Recipes:</h2>
-                <div class="flex">
+                <div class="recipeColumns">
                     <img src="https://via.placeholder.com/100x100" alt="100x100">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, rerum hic voluptatum
-                        reiciendis suscipit sint ex atque voluptas, maiores, perferendis illum neque facere enim saepe
-                        fugiat. Amet eos laboriosam sit?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, rerum hic voluptatum reiciendis suscipit sint ex atque voluptas, maiores, perferendis illum neque facere enim saepe fugiat. Amet eos laboriosam sit. iendis suscipit sint ex atque volupta</p>
+                </div>
+                <div class="recipeColumns">
+                    <img src="https://via.placeholder.com/100x100" alt="100x100">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, rerum hic voluptatum reiciendis suscipit sint ex atque voluptas, maiores, perferendis illum neque facere enim saepe fugiat.</p>
+                </div>
+                <div class="recipeColumns">
+                    <img src="https://via.placeholder.com/100x100" alt="100x100">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, rerum hic voluptatum reiciendis suscipit sint ex atque voluptas, maiores, perferendis illum neque facere enim saepe fugiat. Amet eos laboriosam sit? Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                 </div>
             </div>
         </div>

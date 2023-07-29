@@ -1,6 +1,6 @@
-const searchBox = document.querySelector('#searchBox');
-const filterBox = document.querySelector('#filter');
-const recipeLog = document.querySelector('#recipes');
+// const searchBox = document.querySelector('#searchBox');
+// const filterBox = document.querySelector('#filter');
+// const recipeLog = document.querySelector('#recipes');
 
 var searchbtn = document.querySelector('#searchbtn')
   var foodURL = "";

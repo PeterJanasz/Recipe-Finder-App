@@ -11,6 +11,7 @@ header {
   justify-content: space-between;
   box-shadow: 0 0 10px #000;
   padding: 0 5%;
+  height: 50px;
 }
 
 h1 {
@@ -46,83 +47,45 @@ ul a:hover {
 #hero {
   width: 100%;
   height: 40vh;
-  margin-bottom: 20px;
   background-image: url("");
   background-size: cover;
   background-position-x: -1px;
-  background-position-y: -57px;
-}
-#searchBox {
-  width: 70%;
-  height: 40px;
-  position: absolute;
-  top: 25vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-position-y: -0px;
 }
 
 
 #subContent {
   background-color: antiquewhite;
-  height: 500px;
+  height: fit-content;
   padding: 30px 5%;
   display: flex;
+  flex-direction: column;
 }
 
 
-/* Weather */
-#weather {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75px;
-  height: 70px;
-  /* padding: 50px; */
-  background-color: rgba(250, 250, 250, 0.2);
-  border: 4px solid #000;  /* white might look better after header is inside*/
-  border-radius: 8px;
-  /* vvv Makes content push to the right */
-  transform: translateX(-100%);
-  margin-left: 100%;
-}
-
-
-/* Filter */
+/* Food Filter/Categories */
 #filter {
-  margin-right: 20px;
-  border: 1px solid #000;
-  border-radius: 6px;
-  width: 20%;
-  height: fit-content;
+  display: flex;
+  justify-content: space-between;
 }
 #filter h2 {
-  font-size: 26px;
+  color: #000;
+  font-size: 28px;
   font-weight: 600;
-  text-align: center;
-  background-color: hsl(34, 78%, 81%);
-  border-radius: 6px 6px 0 0;
-}
-/*  */
-.checkbox {
-  display: flex;
-  margin: 10px;
-  font-size: 20px;
-}
-/*  */
-.checkbox input {
-  margin: 0 10px 0 20px;
 }
 
+#searchbtn {
+  width: 300px;
+}
 
-/* Activities */
-#activities {
-  margin-left: 20px;
+/* Recipes */
+#recipes {
   border: 1px solid #000;
   border-radius: 6px;
-  width: 80%;
   height: fit-content;
+  background-color: rgb(6, 121, 27);
 }
-#activities h2 {
+#recipes h2 {
   font-size: 26px;
   font-weight: 600;
   text-align: center;
@@ -130,9 +93,29 @@ ul a:hover {
   border-radius: 6px 6px 0 0;
 }
 
-.flex {
+.recipeColumns {
   border: 1px solid #000;
+  border-radius: 5px;
   margin: 5px;
   display: flex;
   align-items: center;
+  background-color: antiquewhite;
+  cursor: pointer;
+  transition: .8s ease;
+}
+.recipeColumns:hover {
+  scale: 100.7%;
+  box-shadow: 0 0 20px rgba(110, 110, 110, 0.5);
+  transition: 0.2s ease;
+}
+/*  */
+.recipeColumns img {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+
+/* Code For JS */
+.hideIt {
+  display: none;
 }
