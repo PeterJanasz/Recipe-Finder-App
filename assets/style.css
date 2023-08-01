@@ -178,6 +178,7 @@ select {
 .recipeColumns img {
   margin: 5px;
   border-radius: 5px;
+  height: 100px;
 }
 
 
