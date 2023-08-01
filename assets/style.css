@@ -24,7 +24,8 @@ header {
 h1 {
   align-items: center;
   justify-content: center;
-  display: flex;  /* allows h1 to be aligned with the nav */
+  display: flex;
+  /* allows h1 to be aligned with the nav */
   font-weight: 600;
   font-size: 24px;
   background-color: var(--secondary);
@@ -36,12 +37,14 @@ h1 {
 ul {
   display: flex;
 }
+
 li {
   font-weight: 600;
   list-style: none;
   padding: 5px 10px;
   font-family: sans-serif;
 }
+
 ul a {
   color: #000;
   margin: 0 5px;
@@ -51,11 +54,18 @@ ul a {
   border-bottom: 2px solid var(--secondary);
   border-top: 2px solid var(--secondary);
 }
+
 ul a:hover {
   background-color: var(--secondary);
 }
+
 /* End of header */
 
+#hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 #hero {
   width: 100%;
@@ -81,6 +91,7 @@ ul a:hover {
   display: flex;
   justify-content: space-between;
 }
+
 #filter h2 {
   color: #000;
   background-color: var(--secondary);
@@ -96,6 +107,7 @@ ul a:hover {
 select {
   background-color: #000;
 }
+
 /* .select:not(.is-multiple):not(.is-loading)::after {
   border-color: var(--secondary);
 } */
@@ -118,11 +130,13 @@ select {
   color: var(--secondary);
   transition: background-color 0.3s ease;
 }
+
 #searchbtn:hover {
   background-color: var(--secondary);
   /* border: 2px solid var(--primary); */
   color: var(--primary);
 }
+
 #searchbtn:active {
   opacity: 0.85;
 }
@@ -135,6 +149,7 @@ select {
   height: fit-content;
   background-color: hsla(34, 77%, 77%, 0.5);
 }
+
 #recipes h2 {
   font-size: 26px;
   font-weight: 600;
@@ -152,11 +167,13 @@ select {
   cursor: pointer;
   transition: .8s ease;
 }
+
 .recipeColumns:hover {
   scale: 100.7%;
   box-shadow: 0 0 20px rgba(110, 110, 110, 0.5);
   transition: 0.2s ease;
 }
+
 /*  */
 .recipeColumns img {
   margin: 5px;
