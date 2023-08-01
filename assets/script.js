@@ -1,7 +1,7 @@
 // const searchBox = document.querySelector('#searchBox');
 // const filterBox = document.querySelector('#filter');
 const recipeLog = document.querySelector('#recipes');
-var gifDiv = document.querySelector("#hero");
+var gifDiv = document.querySelectorAll("#hero");
 var searchbtn = document.querySelector('#searchbtn');
 var foodURL = "";
 
@@ -86,15 +86,15 @@ function updateURL() {
         foodURL += `&diet=${dietVal}`;
     } 
     if (cuisineVal !== "any") {
-       foodURL += `&cuisine=${cuisineVal}`;
+       foodURL += `&cuisineType=${cuisineVal}`;
     }
     if (mealVal !== "any") {
-        foodURL += `&meal=${mealVal}`;
+        foodURL += `&mealType=${mealVal}`;
     }
     if (healthVal !== "any") {
         foodURL += `&health=${healthVal}`;
     }
-   
+   console.log(foodURL)
     recipe();
 }
 
