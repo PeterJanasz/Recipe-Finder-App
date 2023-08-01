@@ -17,7 +17,7 @@ var gifURL = "https://api.giphy.com/v1/gifs/random?api_key=0UTRbFtkMxAplrohufYco
 
 function recipe() {
     var recipeURL = "https://api.edamam.com/api/recipes/v2?type=public&app_id=958f1348&app_key=%20e8d4353da99df583c30fa14e3417b53c%09&imageSize=SMALL&random=true" + foodURL;
-
+console.log(recipeURL);
 
     fetch(recipeURL)
         .then(function (response) {
@@ -25,7 +25,7 @@ function recipe() {
         })
         .then(function (data) {
             console.log(data);
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 10; i++) {
                 var recipeTitle = data.hits[i].recipe.label;
                 var recipeImg = data.hits[i].recipe.image;
                 var recipeURL = data.hits[i].recipe.url;
@@ -34,42 +34,55 @@ function recipe() {
                 var newRecipe = document.createElement('div');
                 newRecipe.setAttribute("class", "recipeColumns");
                 newRecipe.innerHTML = `
+                <a href='${recipeURL}'><img src='${recipeImg}'></img></a>
             <h2>${recipeTitle}</h2>
-            <a href='${recipeURL}'><img src='${recipeImg}'></img></a>
             `;
                 recipeLog.appendChild(newRecipe)
             }
-            console.log(recipeURL);
+            
         })
 };
 
 //dropdown selection
 var diet = document.getElementById("diet");
-
 var cuisine = document.getElementById("cuisine-type");
-
 var meal = document.getElementById("meal-type");
-
-var dish = document.getElementById("dish-type");
+var health = document.getElementById("health-label");
 
 //returns string to add to api url
 function updateURL() {
-
+    recipeLog.innerHTML = `
+    <h2>Recipes:</h2>
+    `
     foodURL = "";
     var dietVal = diet.options[diet.selectedIndex].text;
-    console.log(diet);
     var cuisineVal = cuisine.options[cuisine.selectedIndex].text;
     var mealVal = meal.options[meal.selectedIndex].text;
-    var dishVal = dish.options[dish.selectedIndex].text;
+    var healthVal = health.options[health.selectedIndex].text;
 
     // Construct the API URL based on the selected values
-    foodURL += `&diet=${dietVal}&cuisine=${cuisineVal}&meal=${mealVal}&dish=${dishVal}`;
-    console.log(foodURL);
-recipe();
+    if (dietVal !== "any") {
+        foodURL += `&diet=${dietVal}`;
+    } 
+    if (cuisineVal !== "any") {
+       foodURL += `&cuisine=${cuisineVal}`;
+    }
+    if (mealVal !== "any") {
+        foodURL += `&meal=${mealVal}`;
+    }
+    if (healthVal !== "any") {
+        foodURL += `&health=${healthVal}`;
+    }
+   
+    recipe();
 }
-
 recipe();
-searchbtn.addEventListener('click', updateURL);
+
+
+searchbtn.addEventListener('click', function() {
+    updateURL();
+    recipe();
+});
 
 
 
