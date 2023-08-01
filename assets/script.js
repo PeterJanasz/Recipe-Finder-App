@@ -38,6 +38,20 @@ function recipe() {
             }
         })
 };
+
+//dropdown selection
+var diet = document.getElementById("diet");
+var dietText = diet.options[diet.selectedIndex].text;
+
+var cuisine = document.getElementById("cuisine-type");
+var cuisineText = cuisine.options[cuisine.selectedIndex].text;
+
+var meal = document.getElementById("meal-type");
+var mealText = meal.options[meal.selectedIndex].text;
+
+var dish = document.getElementById("dish-type");
+var dishText = dish.options[dish.selectedIndex].text;
+
 // returns string to add to api url
 function getIngredients() {
  var checkedBoxes = document.querySelectorAll("input[type='checkbox']:checked");
