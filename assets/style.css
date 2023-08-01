@@ -1,11 +1,18 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
+:root {
+  --primary: #D9774D;
+  --secondary: #e2eb9e;
+  --accent: hsl(34, 78%, 81%);
+}
+
 * {
   padding: 0;
   margin: 0;
 }
 
 header {
+  background-color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,6 +27,10 @@ h1 {
   display: flex;  /* allows h1 to be aligned with the nav */
   font-weight: 600;
   font-size: 24px;
+  background-color: var(--secondary);
+  padding: 2px 5px;
+  border-radius: 7px;
+  cursor: default;
 }
 
 ul {
@@ -36,10 +47,12 @@ ul a {
   margin: 0 5px;
   text-decoration: none;
   transition: 0.3s ease;
-  border-radius: 6px;
+  border-radius: 7px;
+  border-bottom: 2px solid var(--secondary);
+  border-top: 2px solid var(--secondary);
 }
 ul a:hover {
-  background-color: gray;
+  background-color: var(--secondary);
 }
 /* End of header */
 
@@ -55,7 +68,7 @@ ul a:hover {
 
 
 #subContent {
-  background-color: antiquewhite;
+  background-color: var(--primary);
   height: fit-content;
   padding: 30px 5%;
   display: flex;
@@ -70,31 +83,67 @@ ul a:hover {
 }
 #filter h2 {
   color: #000;
+  background-color: var(--secondary);
+  padding: 0 5px;
+  margin-bottom: 5px;
+  border-radius: 7px;
   font-size: 28px;
   font-weight: 600;
+  text-align: center;
 }
 
+/* I want the select's to be centered with the filter h2's but don't really know how */
+select {
+  background-color: #000;
+}
+/* .select:not(.is-multiple):not(.is-loading)::after {
+  border-color: var(--secondary);
+} */
+
 #searchbtn {
-  width: 300px;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 40%;
+  margin-top: 120px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 24px;
+  /* styling */
+  padding: 10px;
+  background-color: var(--primary);
+  border: 2px solid var(--secondary);
+  border-radius: 10px;
+  color: var(--secondary);
+  transition: background-color 0.3s ease;
+}
+#searchbtn:hover {
+  background-color: var(--secondary);
+  /* border: 2px solid var(--primary); */
+  color: var(--primary);
+}
+#searchbtn:active {
+  opacity: 0.85;
 }
 
 /* Recipes */
 #recipes {
-  border: 1px solid #000;
+  margin-top: 50px;
+  border: 2px solid var(--accent);
   border-radius: 6px;
   height: fit-content;
-  background-color: rgb(6, 121, 27);
+  background-color: hsla(34, 77%, 77%, 0.5);
 }
 #recipes h2 {
   font-size: 26px;
   font-weight: 600;
   text-align: center;
-  background-color: hsl(34, 78%, 81%);
-  border-radius: 6px 6px 0 0;
+  background-color: var(--accent);
+  border-radius: 3px 3px 0 0;
 }
 
 .recipeColumns {
-  border: 1px solid #000;
   border-radius: 5px;
   margin: 5px;
   display: flex;
