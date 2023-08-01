@@ -1,7 +1,7 @@
 // const searchBox = document.querySelector('#searchBox');
 // const filterBox = document.querySelector('#filter');
 const recipeLog = document.querySelector('#recipes');
-var gifDiv = document.querySelectorAll("#hero");
+var gifDiv = document.querySelector("#hero");
 var searchbtn = document.querySelector('#searchbtn');
 var foodURL = "";
 
@@ -51,13 +51,20 @@ console.log(recipeURL);
                 var recipeURL = data.hits[i].recipe.url;
 
 
+                var favBtn = document.createElement('button');
+                favBtn.innerText = "Add to Favorites List";
+                favBtn.style.padding = '10px';
+                favBtn.style.margin = '10px';
+                
+
                 var newRecipe = document.createElement('div');
                 newRecipe.setAttribute("class", "recipeColumns");
                 newRecipe.innerHTML = `
                 <a href='${recipeURL}'><img src='${recipeImg}'></img></a>
             <h2>${recipeTitle}</h2>
             `;
-                recipeLog.appendChild(newRecipe)
+                recipeLog.appendChild(newRecipe);
+                newRecipe.appendChild(favBtn);
             }
             
         })
