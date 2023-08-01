@@ -1,8 +1,8 @@
 // const searchBox = document.querySelector('#searchBox');
 // const filterBox = document.querySelector('#filter');
 const recipeLog = document.querySelector('#recipes');
-
-var searchbtn = document.querySelector('#searchbtn')
+var gifDiv = document.querySelector("#hero");
+var searchbtn = document.querySelector('#searchbtn');
 var foodURL = "";
 
 //var APIkey = "e8d4353da99df583c30fa14e3417b53c";	
@@ -13,8 +13,28 @@ var foodURL = "";
 
 //https://api.edamam.com/api/recipes/v2?type=public&app_id=958f1348&app_key=%20e8d4353da99df583c30fa14e3417b53c%09& + food + &imageSize=SMALL&random=true
 
-var gifURL = "https://api.giphy.com/v1/gifs/random?api_key=0UTRbFtkMxAplrohufYco5IY74U8hOes&tag=food&rating=pg-13"
 
+
+function gif() {
+    var gifURL = "https://api.giphy.com/v1/gifs/random?api_key=0UTRbFtkMxAplrohufYco5IY74U8hOes&tag=food&rating=pg-13"
+
+    fetch(gifURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            var newGifUrl = data.data.images.original.url;
+            console.log(newGifUrl);
+            var imgElement =document.createElement("img");
+            imgElement.src = newGifUrl;
+            
+            gifDiv.innerHTML = "";
+
+            gifDiv.appendChild(imgElement);
+        })
+
+}
 function recipe() {
     var recipeURL = "https://api.edamam.com/api/recipes/v2?type=public&app_id=958f1348&app_key=%20e8d4353da99df583c30fa14e3417b53c%09&imageSize=SMALL&random=true" + foodURL;
 
@@ -65,9 +85,9 @@ function updateURL() {
     // Construct the API URL based on the selected values
     foodURL += `&diet=${dietVal}&cuisine=${cuisineVal}&meal=${mealVal}&dish=${dishVal}`;
     console.log(foodURL);
-recipe();
+    recipe();
 }
-
+gif();
 recipe();
 searchbtn.addEventListener('click', updateURL);
 
