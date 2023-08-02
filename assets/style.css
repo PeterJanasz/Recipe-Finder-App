@@ -186,3 +186,19 @@ select {
 .hideIt {
   display: none;
 }
+
+#favrecipes {
+  margin-top: 50px;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  height: fit-content;
+  background-color: hsla(34, 77%, 77%, 0.5);
+}
+
+#recipes h2 {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--accent);
+  border-radius: 3px 3px 0 0;
+}

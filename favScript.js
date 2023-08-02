@@ -44,5 +44,4 @@ function localStorageChange() {
     favRecipeDiv.append(newSavedRecipe)
 }
 localStorageChange();
-
-gif()
+gif();
