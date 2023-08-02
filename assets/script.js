@@ -52,6 +52,7 @@ function recipe() {
 
 
                 var favBtn = document.createElement('button');
+                favBtn.setAttribute('class', 'favBtn')
                 favBtn.innerText = "Add to Favorites List";
                 favBtn.style.padding = '10px';
                 favBtn.style.margin = '10px';
@@ -142,6 +143,13 @@ searchbtn.addEventListener('click', function () {
 
 document.addEventListener("click", function (event) {
     //only execute on favBtn click
+    if(event.target.classList.contains('favBtn')) {
+        var recipeTitle = event.target.getAttribute('data-title');
+        var recipeImg = event.target.getAttribute('data-img');
+        var recipeURL = event.target.getAttribute('data-Url');
+        console.log("hello")
+        addToFavorites(recipeTitle, recipeImg, recipeURL);
+    }
 
     //grab value of data attributes, img, title, url. and pass into add to favs function
 
