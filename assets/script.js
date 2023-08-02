@@ -56,6 +56,10 @@ console.log(recipeURL);
                 favBtn.style.padding = '10px';
                 favBtn.style.margin = '10px';
                 
+                //added favBtn eventListener
+                favBtn.addEventListener('click', function () {
+                    addToFavorites(recipeTitle, recipeImg, recipeURL);
+                });
 
                 var newRecipe = document.createElement('div');
                 newRecipe.setAttribute("class", "recipeColumns");
@@ -103,6 +107,28 @@ function updateURL() {
     }
    console.log(foodURL)
     recipe();
+}
+
+//add favorites to localStorage
+function addToFavorites(recipeTitle, recipeImg, recipeURL) {
+    //may need to add this to a seperate JSfile?
+    const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
+
+    // Check if the recipe is already favorited
+    const isFavorited = favoriteRecipes.some((recipe) => recipe.recipeTitle === recipeTitle);
+    if (!isFavorited) {
+        const newRecipe = {
+            recipeTitle,
+            recipeImg,
+            recipeURL,
+        };
+
+        favoriteRecipes.push(newRecipe);
+        localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
+        alert('Recipe added to Favorites!');
+    } else {
+        alert('Recipe is already in Favorites!');
+    }
 }
 
 gif();
