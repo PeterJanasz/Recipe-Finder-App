@@ -1,17 +1,19 @@
-// const searchBox = document.querySelector('#searchBox');
-// const filterBox = document.querySelector('#filter');
+//var APIkey = "e8d4353da99df583c30fa14e3417b53c";	
+//AppID 958f1348
+//APIkey e8d4353da99df583c30fa14e3417b53c	
+//url https://api.edamam.com/api/recipes/v2
+
 const recipeLog = document.querySelector('#recipes');
 var gifDiv = document.querySelector("#hero");
 var searchbtn = document.querySelector('#searchbtn');
 var foodURL = "";
 
-//var APIkey = "e8d4353da99df583c30fa14e3417b53c";	
+//dropdown selection
+var diet = document.getElementById("diet");
+var cuisine = document.getElementById("cuisine-type");
+var meal = document.getElementById("meal-type");
+var health = document.getElementById("health-label");
 
-//AppID 958f1348
-//APIkey e8d4353da99df583c30fa14e3417b53c	
-//url https://api.edamam.com/api/recipes/v2
-
-//https://api.edamam.com/api/recipes/v2?type=public&app_id=958f1348&app_key=%20e8d4353da99df583c30fa14e3417b53c%09& + food + &imageSize=SMALL&random=true
 
 
 
@@ -78,25 +80,19 @@ function recipe() {
         })
 };
 
-//dropdown selection
-var diet = document.getElementById("diet");
-var cuisine = document.getElementById("cuisine-type");
-var meal = document.getElementById("meal-type");
-var health = document.getElementById("health-label");
-
 //returns string to add to api url
 function updateURL() {
-    recipeLog.innerHTML = `
-    <h2>Recipes:</h2>
-    `
     foodURL = "";
     var dietVal = diet.options[diet.selectedIndex].text;
     var cuisineVal = cuisine.options[cuisine.selectedIndex].text;
     var mealVal = meal.options[meal.selectedIndex].text;
     var healthVal = health.options[health.selectedIndex].text;
+    recipeLog.innerHTML = `
+    <h2>Recipes:</h2>
+    <h3>Click on the image to view the site!</h3>
+    `;
 
     // Construct the API URL based on the selected values
-
     if (dietVal !== "any") {
         foodURL += `&diet=${dietVal}`;
     }
@@ -153,11 +149,4 @@ document.addEventListener("click", function (event) {
         addToFavorites(recipeTitle, recipeImg, recipeURL);
         // localStorageChange()
     }
-
-    //grab value of data attributes, img, title, url. and pass into add to favs function
-
 })
-
-
-
-// localStorageChange();
