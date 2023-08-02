@@ -135,11 +135,14 @@ function addToFavorites(recipeTitle, recipeImg, recipeURL) {
 gif();
 recipe();
 
-
-searchbtn.addEventListener('click', function () {
+//if searchbtn {}
+if(searchbtn) {
+    document.addEventListener('click', function () {
     updateURL();
     recipe();
-});
+})
+}
+
 
 document.addEventListener("click", function (event) {
     //only execute on favBtn click
@@ -147,11 +150,14 @@ document.addEventListener("click", function (event) {
         var recipeTitle = event.target.getAttribute('data-title');
         var recipeImg = event.target.getAttribute('data-img');
         var recipeURL = event.target.getAttribute('data-Url');
-        console.log("hello")
         addToFavorites(recipeTitle, recipeImg, recipeURL);
+        // localStorageChange()
     }
 
     //grab value of data attributes, img, title, url. and pass into add to favs function
 
 })
 
+
+
+// localStorageChange();
