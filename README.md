@@ -11,6 +11,6 @@ Used Bulma for CSS framework to create style display and dropdown selections. Th
 
 ## Screenshot
 
-![Screenshot of website](assets/Screenshot%202023-08-02%20at%201.25.02%20PM.png)
+![Screenshot of website](assets/FoodMakerApp.png)
 
  - [Deployed] https://peterjanasz.github.io/Recipe-Finder-App/
