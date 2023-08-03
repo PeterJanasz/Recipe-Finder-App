@@ -36,8 +36,8 @@ function localStorageChange() {
     var newSavedRecipe = document.createElement('div');
     newSavedRecipe.setAttribute('class', 'recipeColumns');
     newSavedRecipe.innerHTML = `
-    <a href='${newSavedRecipeUrl}'><img src='${newSavedRecipeImg}'></img></a>
     <h2>${newSavedRecipeTitle}</h2>
+    <a href='${newSavedRecipeUrl}'><img src='${newSavedRecipeImg}'></img></a>
     `;
     console.log(newSavedRecipe)
     console.log(favRecipeDiv)
